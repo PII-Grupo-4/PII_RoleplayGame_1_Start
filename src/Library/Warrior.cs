@@ -26,17 +26,17 @@ namespace RoleplayGame_1_start{
         public string Name{get;private set;}
 
 
-        public void Add_Element()
-        {
-            if()
-            {
+        // public void Add_Element()
+        // {
+        //     if()
+        //     {
 
-            }
-            else
-            {
+        //     }
+        //     else
+        //     {
 
-            }
-        }
+        //     }
+        // }
 
         public void Remove_Element()
         {
