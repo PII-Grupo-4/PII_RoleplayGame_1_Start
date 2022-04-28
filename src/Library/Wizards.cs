@@ -23,6 +23,22 @@ namespace RoleplayGame_1_start
             this.ItemsWizard = itemsWizard;
         }
 
+        public int GetDamage
+        {
+            get
+            {
+                return this.Attack;
+            }
+        }
+
+        public int GetDefense
+        {
+            get
+            {
+                return this.Defense;
+            }
+        }
+
         public void AddElement(Items item)
         {
             this.ItemsWizard.Add(item);
