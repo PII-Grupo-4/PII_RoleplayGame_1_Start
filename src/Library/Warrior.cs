@@ -27,6 +27,10 @@ namespace RoleplayGame_1_start{
 
         public string Name{get;private set;}
 
+        public void GetInfo(){
+            Console.WriteLine($"Name: {this.name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.Hp}\nItem Quantity: {this.ListItems.Count}");
+        }
+
 
         public void Add_Element(Items item)
         {
@@ -50,7 +54,7 @@ namespace RoleplayGame_1_start{
 
         }
 
-        public void Recibe_Attack(int rattack)
+        public void Receives_Attack(int rattack)
         {
             if (this.Hp == 0)
             {
