@@ -6,7 +6,7 @@ namespace RoleplayGame_1_start
     {
         private int attack { get; set; }
         private int defense { get; set; }
-        public string Name { get; set; }
+        private string Name { get; set; }
         
 
         public Items(string Name, int attack, int defense)

@@ -43,7 +43,7 @@ namespace RoleplayGame_1_start{
                 ListItems.Add(item);
                 this.attack = this.attack + item.GetDamage();
                 this.defense = this.defense + item.GetDefense();
-                Console.WriteLine($"{item.Name} was added .");
+                Console.WriteLine($"{item.GetName()} was added .");
         }
 
         public void Remove_Element(Items item)
@@ -52,7 +52,7 @@ namespace RoleplayGame_1_start{
                 ListItems.Remove(item);
                 this.attack = this.attack - item.GetDamage();
                 this.defense = this.defense - item.GetDefense();
-                Console.WriteLine($"{item.Name} was removed.");
+                Console.WriteLine($"{item.GetName()} was removed.");
             }
             else{
                 Console.WriteLine($"Character {this.name} doesn't have items ");
