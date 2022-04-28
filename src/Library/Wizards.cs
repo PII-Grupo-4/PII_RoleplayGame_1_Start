@@ -11,7 +11,8 @@ namespace RoleplayGame_1_start
         private int Attack { get; set;}
 
         // ItemsWizard contendrá todos los items.
-        List<Object> ItemsWizard = new List<Object>();
+        List<Object> ItemsWizard {get; set;}
+        List<Object> itemsWizard = new List<Object>();
         
         public Wizard (string name)
         {
@@ -19,7 +20,7 @@ namespace RoleplayGame_1_start
             this.Defense = 25;
             this.Attack = 50;
             this.HP = 100;
-            this.ItemsWizard = ItemsWizard;
+            this.ItemsWizard = itemsWizard;
         }
 
         public void AddItem(Items item)
