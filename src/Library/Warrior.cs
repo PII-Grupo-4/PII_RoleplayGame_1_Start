@@ -52,13 +52,20 @@ namespace RoleplayGame_1_start{
 
         public void Recibe_Attack(int rattack)
         {
-            if (this.Hp - (rattack - this.defense) < 0)
+            if (this.Hp == 0)
+            {
+                Console.WriteLine($"{this.Name} is dead");
+            }
+            else if(this.Hp - (rattack - this.defense) <= 0)
             {
                 this.Hp = 0;
+                Console.WriteLine($"{this.Name} died.");
+                 
             }
             else
             {
                 this.Hp = this.Hp - (rattack - this.defense);
+                Console.WriteLine($"{this.Name} have {this.Hp} HP after the attack");
             }
             
 
