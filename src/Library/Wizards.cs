@@ -5,13 +5,13 @@ namespace RoleplayGame_1_start
 {
     public class Wizard
     {
-        public string Name { get; private set;}
-        public int HP { get; set;} // Puntos de vida del personaje
-        public int Defense { get; private set;} // Puntos de defensa el personaje.
-        public int Attack { get; private set;} // Puntos de Ataque del personaje.
+        private string Name { get; set;}
+        private int HP { get; set;} // Puntos de vida del personaje
+        private int Defense { get; set;} // Puntos de defensa el personaje.
+        private int Attack { get; set;} // Puntos de Ataque del personaje.
 
         // ItemsWizard contendrá todos los elementos que posea el personaje.
-        List<Object> ItemsWizard {get; set;}
+        private List<Object> ItemsWizard {get; set;}
         List<Object> itemsWizard = new List<Object>();
         
         public Wizard (string name)
