@@ -61,7 +61,7 @@ namespace RoleplayGame_1_start{
         }
 
         public void GetInfo(){
-            Console.WriteLine($"Nombre: {this.name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.hP}");
+            Console.WriteLine($"Name: {this.name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.hP}\nItem Quantity: {this.ListItems.Count}");
         }
         public int GetDamage()
         {
