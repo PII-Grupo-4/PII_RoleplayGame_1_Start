@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System;
 
 namespace RoleplayGame_1_start{
@@ -5,53 +6,59 @@ namespace RoleplayGame_1_start{
 
         private int Hp;
 
-        private int defence;
+        private int defense;
 
         private int attack;
 
         private string name;
+        List<Items> ListItems = new List<Items>();
 
         public Warrior(string name)
         {
-            this.Defence = 50;
+            this.Defense = 50;
             this.Hp = 100;
             this.Attack = 10;
             this.Name = name;
         }
 
-        public int Defence{get;private set;}
+        public int Defense{get;private set;}
 
         public int Attack{get;private set;} 
 
         public string Name{get;private set;}
 
 
-        // public void Add_Element()
-        // {
-        //     if()
-        //     {
-
-        //     }
-        //     else
-        //     {
-
-        //     }
-        // }
-
-        public void Remove_Element()
+        public void Add_Element(Items item)
         {
+            ListItems.Add(item);
+                this.attack = this.attack + item.GetDamage();
+                this.defense = this.defense + item.GetDefense();
+                Console.WriteLine($"{item.GetName()} was added .");
+        }
+
+        public void Remove_Element(Items item)
+        {
+            if(ListItems.Count >= 1){
+                ListItems.Remove(item);
+                this.attack = this.attack - item.GetDamage();
+                this.defense = this.defense - item.GetDefense();
+                Console.WriteLine($"{item.GetName()} was removed.");
+            }
+            else{
+                Console.WriteLine($"Character {this.name} doesn't have items ");
+            }
 
         }
 
         public void Recibe_Attack(int rattack)
         {
-            if (this.Hp - (rattack - this.defence) < 0)
+            if (this.Hp - (rattack - this.defense) < 0)
             {
                 this.Hp = 0;
             }
             else
             {
-                this.Hp = this.Hp - (rattack - this.defence);
+                this.Hp = this.Hp - (rattack - this.defense);
             }
             
 
