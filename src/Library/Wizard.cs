@@ -55,12 +55,14 @@ namespace RoleplayGame_1_start
 
         // Decidimos que el método que represente los ataques de los personajes lo posea el personaje que lo 
         // recibe, ya que va a ser el que se vea o no modificado por el ataque.
-        public void RecieveEnemy(int AttackEnemy)
+        public void RecieveAttack(int AttackEnemy)
         {
-                if((this.HP + this.Defense) >= AttackEnemy)
+            if (this.HP > 0)
+            {
+                if(this.Defense >= AttackEnemy)
                 {
                     this.HP =+ (AttackEnemy - this.Defense);
-                    if (this.HP < 0)
+                    if (this.HP <= 0)
                     {
                         this.HP = 0;
                         Console.WriteLine($"{this.Name} died.");
@@ -72,8 +74,13 @@ namespace RoleplayGame_1_start
                 } 
                 else
                 {
-                    Console.WriteLine($"{this.Name} is dead.");
+                    Console.WriteLine($"{this.Name} have {this.HP} HP after the attack");
                 }
+            }
+            else
+            {
+                Console.WriteLine($"{this.Name} is dead.");
+            }
         }
     }
 }
