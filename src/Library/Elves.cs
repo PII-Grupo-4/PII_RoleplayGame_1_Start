@@ -16,7 +16,6 @@ namespace RoleplayGame_1_start
             this.ItemsElves = itemsElves; //lista de elementos de los items que tiene el personaje
         }
 
-        private string name;
         public string Name {get; private set;}
 
         public int Attack {get; private set;}
@@ -37,16 +36,22 @@ namespace RoleplayGame_1_start
         public void Recibe_Attack (int dmg) 
         {
             Damage = this.Defense - dmg;
-
-            if (this.Hp - Damage < 0)
+            if (this.Hp > 0)
             {
-                this.Hp = 0;
-                Console.WriteLine ($"El elfo {this.name} ha muerto");
+                if (this.Hp - Damage <= 0)
+                {
+                    this.Hp = 0;
+                    Console.WriteLine ($"The Elve {this.Name} died");
+                }
+                else
+                {
+                    this.Hp = this.Hp - Damage;
+                    Console.WriteLine ($"The Elve {this.Name} have {this.Hp} HP");
+                }
             }
             else
             {
-                this.Hp = this.Hp - Damage;
-                Console.WriteLine ($"El elfo {this.name} tiene {this.Hp} HP");
+                Console.WriteLine ($"The Elve {this.Name} is dead");
             }
         }
         public void AddElement(Items item) //añade elementos al personaje y actualiza sus atributos Attack y Defense
