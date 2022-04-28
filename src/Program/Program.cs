@@ -24,7 +24,11 @@ namespace Program
             dwarve1.Receives_Attack(dwarve2);
             dwarve2.Remove_Element(hammer);
             dwarve1.Remove_Element(hammer);
-            
+
+            Console.WriteLine();
+            Wizard wizard1 = new Wizard("Wizard1");
+            Wizard wizard2 = new Wizard("Wizard2");
+            wizard1.RecieveAttack(wizard2.GetDamage);
         }
     }
 }
