@@ -23,6 +23,7 @@ namespace Program
             Dwarves dwarve1 = new Dwarves("Dwarve1");
             Dwarves dwarve2 = new Dwarves("Dwarve2");
             Hammer hammer = new Hammer("Hammer", 50);
+            Hammer hammer2 = new Hammer("Hammer2", 50);
             Table table = new Table("Table", 50);
 
             dwarve1.GetInfo();
@@ -35,6 +36,7 @@ namespace Program
             dwarve1.GetInfo();
             Console.WriteLine();
 
+            dwarve1.Remove_Hammer(hammer2);
             dwarve2.Remove_Hammer(hammer);
             dwarve1.Remove_Hammer(hammer);
 
