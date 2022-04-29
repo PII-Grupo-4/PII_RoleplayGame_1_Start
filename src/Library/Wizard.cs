@@ -6,9 +6,9 @@ namespace RoleplayGame_1_start
     public class Wizard
     {
         private string Name { get; set;}
-        private int HP { get; set;} // Puntos de vida del personaje
-        private int Defense { get; set;} // Puntos de defensa el personaje.
-        private int Attack { get; set;} // Puntos de Ataque del personaje.
+        private int HP { get; set;} // Puntos de vida
+        private int Defense { get; set;} // Puntos de defensa
+        private int Attack { get; set;} // Puntos de Ataque
 
         // ItemsWizard contendrá todos los elementos que posea el personaje.
         private List<Object> ItemsWizard {get; set;}
@@ -53,8 +53,6 @@ namespace RoleplayGame_1_start
             this.Attack -= item.GetDamage(); 
         }
 
-        // Decidimos que el método que represente los ataques de los personajes lo posea el personaje que lo 
-        // recibe, ya que va a ser el que se vea o no modificado por el ataque.
         public void RecieveAttack(int AttackEnemy)
         {
             if (this.HP > 0)
