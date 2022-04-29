@@ -12,7 +12,6 @@ namespace Program
             Items hammer = new Items("Hammer",50,0);
             Items table = new Items("Table",0,50);
 
-            dwarve1.Attack(dwarve2);
             dwarve1.GetInfo();
             Console.WriteLine();
 
@@ -21,7 +20,6 @@ namespace Program
             dwarve1.GetInfo();
             Console.WriteLine();
 
-            dwarve1.Receives_Attack(dwarve2);
             dwarve2.Remove_Element(hammer);
             dwarve1.Remove_Element(hammer);
 
