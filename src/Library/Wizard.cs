@@ -11,8 +11,13 @@ namespace RoleplayGame_1_start
         private int Attack { get; set;} // Puntos de Ataque
 
         // ItemsWizard contendrá todos los elementos que posea el personaje.
-        private List<Object> ItemsWizard {get; set;}
-        List<Object> itemsWizard = new List<Object>();
+        private List<Sword> SwordsList {get; set;}
+        private List<SpellBook> SpellBooksList {get; set;}
+        
+        List<Sword> swordsList = new List<Sword>();
+        List<SpellBook> spellBooksList = new List<SpellBook>();
+        
+        
         
         public Wizard (string name)
         {
@@ -20,7 +25,8 @@ namespace RoleplayGame_1_start
             this.Defense = 25;
             this.Attack = 50;
             this.HP = 100;
-            this.ItemsWizard = itemsWizard;
+            this.SwordsList = swordsList;
+            this.SpellBooksList = spellBooksList;
         }
 
         public int GetDamage
@@ -39,18 +45,71 @@ namespace RoleplayGame_1_start
             }
         }
 
-        public void AddElement(Items item)
+        public void AddSword(Sword sword)
         {
-            this.ItemsWizard.Add(item);
-            this.Defense += item.GetDefense();
-            this.Attack += item.GetDamage();  
+            this.SwordsList.Add(sword);
+            this.Defense += sword.GetDefense;
+            this.Attack += sword.GetDamage;
+            Console.WriteLine($"The Sword {sword.GetName} has been added.");
         }
 
-        public void RemoveElement(Items item)
+        public void RemoveSword(Sword sword)
         {
-            this.ItemsWizard.Remove(item);
-            this.Defense -= item.GetDefense();
-            this.Attack -= item.GetDamage(); 
+            if (SwordsList.Contains(sword))
+            {
+                this.SwordsList.Remove(sword);
+                this.Defense -= sword.GetDefense;
+                this.Attack -= sword.GetDamage;
+                Console.WriteLine($"The Sword {sword.GetName} has been eliminated.");
+            }
+            else
+            {
+                Console.WriteLine($"The Character {this.Name} doesn't have the sword {sword.GetName}.");
+            }
+        }
+
+        public void AddSpellBook(SpellBook spellBook)
+        {
+            this.SpellBooksList.Add(spellBook);
+            this.Defense += spellBook.GetDefense;
+            this.Attack += spellBook.GetDamage;
+            Console.WriteLine($"The Spell Book {spellBook.GetName} has been added.");
+        }
+
+        public void RemoveSpellBook(SpellBook spellBook)
+        {
+            if (SpellBooksList.Contains(spellBook))
+            {
+                this.SpellBooksList.Remove(spellBook);
+                this.Defense -= spellBook.GetDefense;
+                this.Attack -= spellBook.GetDamage;
+                Console.WriteLine($"The Spell Book {spellBook.GetName} has been eliminated.");
+            }
+            else
+            {
+                Console.WriteLine($"The Character {this.Name} doesn't have the Spell Book {spellBook.GetName}.");
+            }
+        }
+
+        // En el caso de que se agreguen Spells a un Spell Book, para que los atributos del Wizard se
+        // actualizen es necesario utilizar el método UpdateSpellBook.
+        public void UpdateSpellBook(SpellBook spellBook)
+        {
+            if (SpellBooksList.Contains(spellBook))
+            {
+                this.SpellBooksList.Remove(spellBook);
+                this.Defense -= spellBook.GetDefense;
+                this.Attack -= spellBook.GetDamage;
+                
+                this.SpellBooksList.Add(spellBook);
+                this.Defense += spellBook.GetDefense;
+                this.Attack += spellBook.GetDamage;
+                Console.WriteLine($"The Spell Book {spellBook.GetName} has been updated.");
+            }
+            else
+            {
+                Console.WriteLine($"The Character {this.Name} doesn't have the Spell Book {spellBook.GetName}.");
+            }
         }
 
         public void RecieveAttack(int AttackEnemy)
@@ -79,6 +138,12 @@ namespace RoleplayGame_1_start
             {
                 Console.WriteLine($"{this.Name} is dead.");
             }
+
+        }
+
+        public void Heal()
+        {
+            this.HP = 100;
         }
     }
 }

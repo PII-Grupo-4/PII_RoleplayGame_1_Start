@@ -2,14 +2,24 @@ namespace RoleplayGame_1_start
 {
     public class Sword
     {
-        private int Defense { get; set; }
         private string Name { get; set; }
+        private int Defense { get; set; }
+        private int Damage { get; set; }
         
 
-        public Sword(string name, int defense)
+        public Sword(string name, int defense, int damage)
         {
             this.Name = name;
             this.Defense = defense;
+            this.Damage = damage; 
+        }
+
+        public string GetName
+        {
+            get
+            {
+                return this.Name;
+            }
         }
 
         public int GetDefense
@@ -19,11 +29,12 @@ namespace RoleplayGame_1_start
                 return this.Defense;
             }
         }
-        public string GetName
+
+        public int GetDamage
         {
             get
             {
-                return this.Name;
+                return this.Damage;
             }
         }
     }
