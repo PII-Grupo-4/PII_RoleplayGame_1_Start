@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace RoleplayGame_1_start
 {
@@ -11,6 +12,8 @@ namespace RoleplayGame_1_start
         private int defense { get; set; }
         private int hammerAdded = 0;
         private int tableAdded = 0;
+        private List<Hammer> ListHammer = new List<Hammer>();
+        private List<Table> ListTable = new List<Table>();
 
         public Dwarves(string name)
         {
@@ -46,14 +49,16 @@ namespace RoleplayGame_1_start
         {
             this.attack = this.GetDamage() + hammer.GetDamage();
             Console.WriteLine($"{hammer.GetName()} was added .");
+            ListHammer.Add(hammer);
             hammerAdded = 1;
         }
 
         public void Remove_Hammer(Hammer hammer)
         {
-            if (hammerAdded == 1)
+            if (hammerAdded == 1 && ListHammer.Contains(hammer))
             {
                 this.attack = this.GetDamage() - hammer.GetDamage();
+                ListHammer.Remove(hammer);
                 Console.WriteLine($"{hammer.GetName()} was removed.");
                 hammerAdded = 0;
 
@@ -67,15 +72,17 @@ namespace RoleplayGame_1_start
         public void Add_Table(Table table)
         {
             this.defense = this.GetDefense() + table.GetDefense();
+            ListTable.Add(table);
             Console.WriteLine($"{table.GetName()} was added .");
             tableAdded = 1;
         }
 
         public void Remove_Table(Table table)
         {
-            if (tableAdded == 1)
+            if (tableAdded == 1 && ListTable.Contains(table))
             {
                 this.defense = this.GetDefense() - table.GetDefense();
+                ListTable.Remove(table);
                 Console.WriteLine($"{table.GetName()} was removed.");
                 tableAdded = 0;
 
