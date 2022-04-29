@@ -29,6 +29,20 @@ namespace Program
             Wizard wizard1 = new Wizard("Wizard1");
             Wizard wizard2 = new Wizard("Wizard2");
             wizard1.RecieveAttack(wizard2.GetDamage);
+
+            Warrior warrior1 = new Warrior("WarriorPlayer1");
+            Warrior warrior2 = new Warrior("WarriorPlayer2");
+            Items shield = new Items("GodShield", 1, 110);
+            Items armor = new Items("Rookie Fragile Armor",0,5);
+
+            warrior1.Add_Element(shield);
+            warrior1.Add_Element(armor);
+            warrior1.GetInfo();
+            Console.WriteLine();
+
+            warrior1.Receives_Attack(warrior2.Attack);
+            warrior2.Remove_Element(armor);
+            warrior1.Remove_Element(shield);
         }
     }
 }
