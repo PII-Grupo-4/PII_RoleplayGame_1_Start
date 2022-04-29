@@ -10,7 +10,6 @@ namespace RoleplayGame_1_start{
 
         private int attack;
 
-        private string name;
         List<Items> ListItems = new List<Items>();
 
         public Warrior(string name)
@@ -28,7 +27,7 @@ namespace RoleplayGame_1_start{
         public string Name{get;private set;}
 
         public void GetInfo(){
-            Console.WriteLine($"Name: {this.name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.Hp}\nItem Quantity: {this.ListItems.Count}");
+            Console.WriteLine($"Name: {this.Name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.Hp}\nItem Quantity: {this.ListItems.Count}");
         }
 
 
@@ -49,7 +48,7 @@ namespace RoleplayGame_1_start{
                 Console.WriteLine($"{item.GetName()} was removed.");
             }
             else{
-                Console.WriteLine($"Character {this.name} doesn't have items ");
+                Console.WriteLine($"Character {this.Name} doesn't have items ");
             }
 
         }

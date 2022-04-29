@@ -1,8 +1,8 @@
 using NUnit.Framework;
 
-namespace Test.Library
+namespace RoleplayGame_1_start.Test
 {
-    public class SpellAndSpellBookTests
+    public class SpellAndSpellBook
     {
         // Chequeamos que las clases Spell and SpellBook funcionan correctamente
         [Test]
