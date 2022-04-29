@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System;
 
 namespace RoleplayGame_1_start
@@ -27,15 +26,15 @@ namespace RoleplayGame_1_start
             {
                 if (EnemyAttack >= (this.GetDefense()))
                 {
-                    this.hp = this.hp - (EnemyAttack - this.GetDefense());
-                    if(this.hp <=0)
+                    this.hp = this.GetHP() - (EnemyAttack - this.GetDefense());
+                    if(this.GetHP() <=0)
                     {
                         this.hp = 0;
                         Console.WriteLine($"{this.name} died.");
                     }
                     else
                     {
-                    Console.WriteLine($"{this.name} have {this.hp} HP after the attack");
+                    Console.WriteLine($"{this.name} have {this.GetHP()} HP after the attack");
                     }
                 }
             }
@@ -90,7 +89,7 @@ namespace RoleplayGame_1_start
 
         public void GetInfo()
         {
-            Console.WriteLine($"Name: {this.name} \nAttack: {this.GetDamage()} \nDefense: {this.GetDefense()}\nHP: {this.hp}");
+            Console.WriteLine($"Name: {this.name} \nAttack: {this.GetDamage()} \nDefense: {this.GetDefense()}\nHP: {this.GetHP()}");
         }
         public int GetDamage()
         {
@@ -99,6 +98,10 @@ namespace RoleplayGame_1_start
         public int GetDefense()
         {
             return this.defense;
+        }
+        public int GetHP()
+        {
+            return this.hp;
         }
     }
 }
