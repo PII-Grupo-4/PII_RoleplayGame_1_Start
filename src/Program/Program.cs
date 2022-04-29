@@ -5,6 +5,17 @@ namespace Program
 {
     class Program
     {
+        /* Parte 3
+            Para obtener los valores totales de defensa y ataque totales de los personajes decidimos utilizar 
+            métodos getters dentro de cada clase.
+            Para atacar a un personaje (disminuir la vida), decidimos que sea un método de la clase que
+            recibe el ataque, ya que la misma se verá modificada, teniendo el daño del personaje que ataca
+            como parámetro. Para obtener el daño total de un personaje, como se nombro anteriormente, utilizamos
+            un método get. Decidimos tomar esta desición porque para realizarla necesitamos saber 3 datos (daño, 
+            vida y defensa) y modificar 1 o ninguno(vida), la clase que recibe el daño conoce 2 y puede modificar
+            con libertad la vida, por lo tanto es la más experta para relizar la responsabilidad. Para remendar
+            su desconocimiento utilizamos el getter.
+        */
         static void Main(string[] args)
         {
             /*----------------------------------------------------------------------------------------------*/
@@ -54,6 +65,12 @@ namespace Program
             warrior1.Receives_Attack(warrior2.Attack);
             warrior2.Remove_Element(armor);
             warrior1.Remove_Element(shield);
+
+            /*----------------------------------------------------------------------------------------------*/
+            //Orc
+
+            /*----------------------------------------------------------------------------------------------*/
+            //Elves
         }
     }
 }
