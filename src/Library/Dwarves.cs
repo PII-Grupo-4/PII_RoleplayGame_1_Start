@@ -110,5 +110,10 @@ namespace RoleplayGame_1_start
         {
             return this.hp;
         }
+
+        public void Heal()
+        {
+            this.hp = 200;
+        }
     }
 }
