@@ -7,27 +7,34 @@ namespace Program
     {
         static void Main(string[] args)
         {
+/*----------------------------------------------------------------------------------------------*/
+            //Dwarves
             Dwarves dwarve1 = new Dwarves("Dwarve1");
             Dwarves dwarve2 = new Dwarves("Dwarve2");
-            Items hammer = new Items("Hammer",50,0);
-            Items table = new Items("Table",0,50);
+            Hammer hammer = new Hammer("Hammer",50);
+            Table table = new Table("Table",50);
 
             dwarve1.GetInfo();
             Console.WriteLine();
 
-            dwarve1.Add_Element(hammer);
-            dwarve1.Add_Element(table);
+            dwarve1.Add_Hammer(hammer);
+            dwarve1.Add_Table(table);
+            Console.WriteLine();
+
             dwarve1.GetInfo();
             Console.WriteLine();
 
-            dwarve2.Remove_Element(hammer);
-            dwarve1.Remove_Element(hammer);
-
+            dwarve2.Remove_Hammer(hammer);
+            dwarve1.Remove_Hammer(hammer);
+/*----------------------------------------------------------------------------------------------*/
+            // Wizard
             Console.WriteLine();
             Wizard wizard1 = new Wizard("Wizard1");
             Wizard wizard2 = new Wizard("Wizard2");
             wizard1.RecieveAttack(wizard2.GetDamage);
 
+/*----------------------------------------------------------------------------------------------*/
+            //Warrior
             Warrior warrior1 = new Warrior("WarriorPlayer1");
             Warrior warrior2 = new Warrior("WarriorPlayer2");
             Items shield = new Items("GodShield", 1, 110);

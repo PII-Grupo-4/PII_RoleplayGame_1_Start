@@ -10,9 +10,8 @@ namespace RoleplayGame_1_start
         private int hp { get; set; }
         private int attack { get; set; }
         private int defense { get; set; }
-
-        private List<Items> ListItems = new List<Items>();
-
+        private int hammerAdded = 0;
+        private int tableAdded = 0;
 
         public Dwarves(string name)
         {
@@ -44,33 +43,54 @@ namespace RoleplayGame_1_start
         }
 
 
-        public void Add_Element(Items item)
+        public void Add_Hammer(Hammer hammer)
         {
-            ListItems.Add(item);
-            this.attack = this.GetDamage() + item.GetDamage();
-            this.defense = this.GetDefense() + item.GetDefense();
-            Console.WriteLine($"{item.GetName()} was added .");
+            this.attack = this.GetDamage() + hammer.GetDamage();
+            Console.WriteLine($"{hammer.GetName()} was added .");
+            hammerAdded = 1;
         }
 
-        public void Remove_Element(Items item)
+        public void Remove_Hammer(Hammer hammer)
         {
-            if (ListItems.Count >= 1)
+            if (hammerAdded == 1)
             {
-                ListItems.Remove(item);
-                this.attack = this.GetDamage() - item.GetDamage();
-                this.defense = this.GetDefense() - item.GetDefense();
-                Console.WriteLine($"{item.GetName()} was removed.");
+                this.attack = this.GetDamage() - hammer.GetDamage();
+                Console.WriteLine($"{hammer.GetName()} was removed.");
+                hammerAdded = 0;
+
             }
             else
             {
-                Console.WriteLine($"Character {this.name} doesn't have items ");
+                Console.WriteLine($"Character {this.name} doesn't have a {hammer.GetName()} ");
+            }
+
+        }
+        public void Add_Table(Table table)
+        {
+            this.defense = this.GetDefense() + table.GetDefense();
+            Console.WriteLine($"{table.GetName()} was added .");
+            tableAdded = 1;
+        }
+
+        public void Remove_Table(Table table)
+        {
+            if (tableAdded == 1)
+            {
+                this.defense = this.GetDefense() - table.GetDefense();
+                Console.WriteLine($"{table.GetName()} was removed.");
+                tableAdded = 0;
+
+            }
+            else
+            {
+                Console.WriteLine($"Character {this.name} doesn't have a {table.GetName()} ");
             }
 
         }
 
         public void GetInfo()
         {
-            Console.WriteLine($"Name: {this.name} \nAttack: {this.GetDamage()} \nDefense: {this.GetDefense()}\nHP: {this.hp}\nItem Quantity: {this.ListItems.Count}");
+            Console.WriteLine($"Name: {this.name} \nAttack: {this.GetDamage()} \nDefense: {this.GetDefense()}\nHP: {this.hp}");
         }
         public int GetDamage()
         {
