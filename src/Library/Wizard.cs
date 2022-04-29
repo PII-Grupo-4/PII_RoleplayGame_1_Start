@@ -61,7 +61,7 @@ namespace RoleplayGame_1_start
             {
                 if(this.Defense >= AttackEnemy)
                 {
-                    this.HP =+ (AttackEnemy - this.Defense);
+                    this.HP =- (AttackEnemy - this.Defense);
                     if (this.HP <= 0)
                     {
                         this.HP = 0;
