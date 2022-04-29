@@ -15,7 +15,7 @@ namespace RoleplayGame_1_start
             this.Name = NameBook;
             this.Spells = spells;
         }
-
+        // Detalle: Primero se debe crear el libro, y recien una vez creado se pueden agregar hechizos.
         public void AddSpell(Spell spell)
         {
             this.Spells.Add(spell);
@@ -24,6 +24,14 @@ namespace RoleplayGame_1_start
         public void RemoveSpell(Spell spell)
         {
             this.Spells.Remove(spell);
+        }
+
+        public List<Spell> GetSpells
+        {
+            get
+            {
+                return this.Spells;
+            }
         }
     }
 }
