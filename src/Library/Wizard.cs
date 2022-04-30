@@ -50,7 +50,7 @@ namespace RoleplayGame_1_start
             this.SwordsList.Add(sword);
             this.Defense += sword.GetDefense;
             this.Attack += sword.GetDamage;
-            Console.WriteLine($"The Sword {sword.GetName} has been added.");
+            Console.WriteLine($"The Sword {sword.GetName} was added.");
         }
 
         public void RemoveSword(Sword sword)
@@ -60,7 +60,7 @@ namespace RoleplayGame_1_start
                 this.SwordsList.Remove(sword);
                 this.Defense -= sword.GetDefense;
                 this.Attack -= sword.GetDamage;
-                Console.WriteLine($"The Sword {sword.GetName} has been eliminated.");
+                Console.WriteLine($"The Sword {sword.GetName} was eliminated.");
             }
             else
             {
@@ -73,7 +73,7 @@ namespace RoleplayGame_1_start
             this.SpellBooksList.Add(spellBook);
             this.Defense += spellBook.GetDefense;
             this.Attack += spellBook.GetDamage;
-            Console.WriteLine($"The Spell Book {spellBook.GetName} has been added.");
+            Console.WriteLine($"The Spell Book {spellBook.GetName} was added.");
         }
 
         public void RemoveSpellBook(SpellBook spellBook)
@@ -83,7 +83,7 @@ namespace RoleplayGame_1_start
                 this.SpellBooksList.Remove(spellBook);
                 this.Defense -= spellBook.GetDefense;
                 this.Attack -= spellBook.GetDamage;
-                Console.WriteLine($"The Spell Book {spellBook.GetName} has been eliminated.");
+                Console.WriteLine($"The Spell Book {spellBook.GetName} was eliminated.");
             }
             else
             {
@@ -104,7 +104,7 @@ namespace RoleplayGame_1_start
                 this.SpellBooksList.Add(spellBook);
                 this.Defense += spellBook.GetDefense;
                 this.Attack += spellBook.GetDamage;
-                Console.WriteLine($"The Spell Book {spellBook.GetName} has been updated.");
+                Console.WriteLine($"The Spell Book {spellBook.GetName} was updated.");
             }
             else
             {
