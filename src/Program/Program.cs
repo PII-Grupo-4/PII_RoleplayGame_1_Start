@@ -79,6 +79,27 @@ namespace Program
 
             /*----------------------------------------------------------------------------------------------*/
             //Elves
+            Elves elves1 = new Elves("Aragorn");
+            Elves elves2 = new Elves("Calos");
+            BagofRocks bagofrocks1 = new BagofRocks ("Bag_nvl1", 50, 0);
+            Helmet helmet1 = new Helmet("Helmet_nvl1", 0, 100);
+            BagofRocks bagofrocks2 = new BagofRocks ("Bag_nvl2", 250, 0);
+            Helmet helmet2 = new Helmet("Helmet_nvl2", 0, 200);
+
+            elves1.AddItems(bagofrocks1);
+            elves1.AddItems(helmet1);
+            elves1.GetInfo();
+            elves2.AddItems(bagofrocks2);
+            elves2.AddItems(helmet2);
+            elves2.GetInfo();
+
+            elves1.Receives_Attack(elves2.Attack);
+            elves1.GetInfo();
+            elves2.RemoveElement(bagofrocks2);
+            elves2.GetInfo();
+            elves2.RemoveElement(helmet2);
+            elves2.GetInfo();
+
         }
     }
 }
