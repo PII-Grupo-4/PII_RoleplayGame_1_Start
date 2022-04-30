@@ -1,22 +1,43 @@
+using System;
 namespace RoleplayGame_1_start
 {
     public class Bow
     {
-    private int defense { get; set; }
-    private string Name { get; set; }
     
-    public Bow(string Name, int defense)
+
+    private int Defense { get; set; }
+    private string Name { get; set; }
+    private int Damage { get; set; }
+        
+    
+    public Bow(string name, int defense, int damage)
         {
-        this.Name = Name;
-        this.defense = defense;
+        this.Name = name;
+        this.Defense = defense;
+        this.Damage = damage;
         }
-    public int GetDefense()
+        
+        public string GetName
         {
-        return this.defense;
+            get
+            {
+                return this.Name;
+            }
         }
-        public string GetName()
+        public int GetDefense
         {
-        return this.Name;
+            get
+            {
+                return this.Defense;
+            }
+        }
+         public int GetDamage
+        {
+            get
+            {
+                return this.Damage;
+            }
         }
     }
 }
+ 

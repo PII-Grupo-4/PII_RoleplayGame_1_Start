@@ -9,7 +9,9 @@ namespace RoleplayGame_1_start
         private int Attack {get;set;}
         private int Defense {get;set;}
         private int HP {get;set;}
-        List<Items> ListItems = new List<Items>();
+        
+        List<Bow> BowList = new List<Bow>();
+        List<Mask> MaskList = new List<Mask>();
 
         public Orc (string name)
         {
@@ -34,40 +36,74 @@ namespace RoleplayGame_1_start
         public void Enemy_Attack(Orc enemy)
         {
         this.HP=this.HP-(this.Defense-enemy.Attack);
-        if (this.HP<0)
+        if (this.HP<=0)
         {
             this.HP=0;
+            Console.WriteLine ($"The Orc {this.Name} has died");
+
         }
         else
         {
             this.HP=this.HP;
+            Console.WriteLine ($"After the attack, the Orc {this.Name} have {this.HP} HP");
         }
         }
 
-         
-        public void AddElement(Items item)
+         public void AddBow(Bow bow)
         {
-                ListItems.Add(item);
-                this.Attack = this.Attack + item.GetDamage();
-                this.Defense = this.Defense + item.GetDefense();
-                Console.WriteLine($"{item.GetName()} was added .");
+            this.BowList.Add(bow);
+            this.Defense = this.Defense+ Bow.GetDefense();
+            this.Attack = this.Attack + Bow.GetDamage();
+            Console.WriteLine($"The Bow {Bow.GetName()} was added.");
         }
 
-        public void RemoveElement(Items item)
+        public void AddMask(Mask mask)
         {
-            if(ListItems.Count >= 1){
-                ListItems.Remove(item);
-                this.Attack = this.Attack - item.GetDamage();
-                this.Defense = this.Defense - item.GetDefense();
-                Console.WriteLine($"{item.GetName()} was removed.");
+            this.MaskList.Add(mask);
+            this.Defense = this.Defense + Bow.GetDefense();
+            this.Attack= this.Attack + Bow.GetDamage();
+            Console.WriteLine($"The mask {Mask.GetName()} was added");
+        }
+        
+        
+        public void RemoveBow(Bow bow)
+        {
+            if(BowList.Count >= 1)
+            {
+                BowList.Remove(bow);
+                this.Attack = this.Attack - Bow.GetDamage();
+                this.Defense = this.Defense - Bow.GetDefense();
+                Console.WriteLine($"{Bow.GetName()} was removed.");
             }
             else{
-                Console.WriteLine($"Character {this.Name} doesn't have items ");
+                Console.WriteLine($"Orc {this.Name} doesn't have any Bows ");
             }
-
-            
-           
-
+        }
+        public void RemoveMask(Mask mask)
+        {
+            if(MaskList.Count >= 1)
+            {
+                MaskList.Remove(mask);
+                this.Attack = this.Attack - Mask.GetDamage();
+                this.Defense = this.Defense - Mask.GetDefense();
+                Console.WriteLine($"{Mask.GetName()} was removed.");
+            }
+            else
+            {
+                Console.WriteLine($"Orc {this.Name} doesn't have any Masks ");
+            }
+        }
+         public int GetDamage()
+        {
+            return this.Attack;
+        }
+        public int GetDefense()
+        {
+            return this.Defense;
+        }
+        public int GetHP()
+        {
+            return this.HP;
         }
 
     }
