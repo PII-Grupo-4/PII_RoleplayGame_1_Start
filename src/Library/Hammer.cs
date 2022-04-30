@@ -3,12 +3,12 @@ namespace RoleplayGame_1_start
     public class Hammer
     {
         private int attack { get; set; }
-        private string Name { get; set; }
+        private string name { get; set; }
         
 
-        public Hammer(string Name, int attack)
+        public Hammer(string name, int attack)
         {
-            this.Name = Name;
+            this.name = name;
             this.attack = attack;
         }
 
@@ -18,7 +18,7 @@ namespace RoleplayGame_1_start
         }
         public string GetName()
         {
-            return this.Name;
+            return this.name;
         }
     }
 }
