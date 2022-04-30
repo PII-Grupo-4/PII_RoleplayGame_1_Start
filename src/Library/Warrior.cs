@@ -4,7 +4,7 @@ using System;
 namespace RoleplayGame_1_start{
     public class Warrior{
 
-        private int Hp;
+        private int hp;
 
         private int defense;
 
@@ -27,6 +27,8 @@ namespace RoleplayGame_1_start{
         public int Defense{get;private set;}
 
         public int Attack{get;private set;} 
+
+        public int Hp{get;private set;} 
 
         public string Name{get;private set;}
 
