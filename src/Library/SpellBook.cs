@@ -19,6 +19,7 @@ namespace RoleplayGame_1_start
             this.Defense = 0;
             this.Damage = 0;
         }
+        
         // Detalle: Primero se debe crear el libro, y recien una vez creado se pueden agregar hechizos.
         public void AddSpell(Spell spell)
         {
