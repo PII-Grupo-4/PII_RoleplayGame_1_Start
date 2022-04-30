@@ -16,26 +16,15 @@ namespace RoleplayGame_1_start
         public Orc (string name)
         {
         this.Name = name;
-        this.Defense = 30;
-        this.Attack = 45;
+        this.Defense = 50;
+        this.Attack = 25;
         this.HP = 100;
         }
-        public void Attack_Enemy(Orc enemy)
-        {
-        enemy.HP= enemy.HP-(enemy.Defense-this.Attack);
-        if (enemy.HP<0)
-            {
-            enemy.HP=0;
-            }
-        else
-            {
-            enemy.HP=enemy.HP;
-            }
-        }
+        
 
-        public void Enemy_Attack(Orc enemy)
+        public void Receives_Attack(int EnemyAttack)
         {
-        this.HP=this.HP-(this.Defense-enemy.Attack);
+        this.HP=this.HP-(this.Defense-EnemyAttack);
         if (this.HP<=0)
         {
             this.HP=0;
