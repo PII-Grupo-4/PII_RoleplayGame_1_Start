@@ -45,6 +45,15 @@ namespace RoleplayGame_1_start
             }
         }
 
+        public int GetHP
+        {
+            get
+            {
+                return this.HP;
+            }
+        }
+
+
         public void AddSword(Sword sword)
         {
             this.SwordsList.Add(sword);
@@ -91,20 +100,16 @@ namespace RoleplayGame_1_start
             }
         }
 
-        // En el caso de que se agreguen Spells a un Spell Book, para que los atributos del Wizard se
-        // actualizen es necesario utilizar el método UpdateSpellBook.
-        public void UpdateSpellBook(SpellBook spellBook)
+        // Si se desea agregar Spells a un SpellBook que ya se encuentra adquirido por un Wizard, se debe utilizar
+        //  el método AddSpellToWizardBook en lugar de AddSpell (método del SpellBook).
+        public void AddSpellToWizardBook(SpellBook spellBook, Spell spell)
         {
             if (SpellBooksList.Contains(spellBook))
             {
-                this.SpellBooksList.Remove(spellBook);
-                this.Defense -= spellBook.GetDefense;
-                this.Attack -= spellBook.GetDamage;
-                
-                this.SpellBooksList.Add(spellBook);
-                this.Defense += spellBook.GetDefense;
-                this.Attack += spellBook.GetDamage;
-                Console.WriteLine($"The Spell Book {spellBook.GetName} was updated.");
+                spellBook.AddSpell(spell);
+                this.Attack += 10;
+                this.Defense += 5;
+                Console.WriteLine("The Spell was added.");
             }
             else
             {
@@ -112,13 +117,30 @@ namespace RoleplayGame_1_start
             }
         }
 
+        // Lo mismo para eliminar un Spell de un SpellBook de un Wizard
+        public void RemoveSpellToWizardBook(SpellBook spellBook, Spell spell)
+        {
+            if (SpellBooksList.Contains(spellBook))
+            {
+                spellBook.RemoveSpell(spell);
+                this.Attack -= 10;
+                this.Defense -= 5;
+                Console.WriteLine("The Spell was eliminated.");
+            }
+            else
+            {
+                Console.WriteLine($"The Character {this.Name} doesn't have the Spell Book {spellBook.GetName}.");
+            }
+        }
+
+
         public void RecieveAttack(int AttackEnemy)
         {
             if (this.HP > 0)
             {
-                if(this.Defense >= AttackEnemy)
+                if(AttackEnemy >= this.Defense)
                 {
-                    this.HP =- (AttackEnemy - this.Defense);
+                    this.HP -= (AttackEnemy - this.Defense);
                     if (this.HP <= 0)
                     {
                         this.HP = 0;
@@ -127,7 +149,7 @@ namespace RoleplayGame_1_start
                     else
                     {
                         Console.WriteLine($"{this.Name} have {this.HP} HP after the attack");
-                    }  
+                    } 
                 } 
                 else
                 {

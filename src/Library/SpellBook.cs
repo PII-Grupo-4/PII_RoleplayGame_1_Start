@@ -21,6 +21,8 @@ namespace RoleplayGame_1_start
         }
         
         // Detalle: Primero se debe crear el libro, y recien una vez creado se pueden agregar hechizos.
+        // El método AddSpell se utiliza solamente cuando el SpellBook no lo posee ningún mago, en caso+
+        // de que algún mago lo tenga, se debe utilizar el método de Wizard AddSpellToWizardBook.
         public void AddSpell(Spell spell)
         {
             this.Spells.Add(spell);
@@ -29,6 +31,7 @@ namespace RoleplayGame_1_start
             Console.WriteLine("The Spell was added.");
         }
 
+        // Si el SpellBook lo posee un Wizard utilizar RemoveSpellToWizardBook
         public void RemoveSpell(Spell spell)
         {
             if (this.Spells.Contains(spell))
