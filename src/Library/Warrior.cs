@@ -14,7 +14,8 @@ namespace RoleplayGame_1_start{
 
         private Armor armor;
 
-        List<Items> ListItems = new List<Items>();
+        private List<Armor> ListArmor = new List<Armor>();
+        private List<Shield> ListShield = new List<Shield>();
 
         public Warrior(string name)
         {
@@ -33,7 +34,7 @@ namespace RoleplayGame_1_start{
         public string Name{get;private set;}
 
         public void GetInfo(){
-            Console.WriteLine($"Name: {this.Name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.Hp}\nItem Quantity: {this.ListItems.Count}");
+            Console.WriteLine($"Name: {this.Name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.Hp}\nItem Quantity: {this.ListArmor.Count + this.ListShield.Count}");
         }
 
         public void Heal()
@@ -45,36 +46,60 @@ namespace RoleplayGame_1_start{
         public void Add_Shield(Shield item)
         {
             shield = item;
-                this.defense = this.defense + item.GetDefense();
-                Console.WriteLine($"{item.GetName()} was added .");
+            if (ListShield.Contains(shield))
+            {
+                Console.WriteLine($"{this.Name} already has this item");
+            }
+            else
+            {
+                this.defense = this.defense + shield.GetDefense();
+                Console.WriteLine($"{shield.GetName()} was added .");
+            }
+                
         }
         public void Add_Armor(Armor item)
         {
             armor = item;
+            if (ListArmor.Contains(armor))
+            {
+                Console.WriteLine($"{this.Name} already has this item");
+            }
+            else
+            {
                 this.defense = this.defense + item.GetDefense();
                 Console.WriteLine($"{item.GetName()} was added .");
+
+            }
+                
         }
 
 
         public void Remove_Armor(Armor item)
         {
-            if(armor == item){
-                armor = null;
-                this.defense = this.defense - item.GetDefense();
+            armor = item;
+            if(ListArmor.Contains(armor))
+            {
+                ListArmor.Remove(armor);
+                this.defense = this.defense - armor.GetDefense();
                 Console.WriteLine($"{item.GetName()} was removed.");
             }
-            else{
+            else
+            {
                 Console.WriteLine($"Character {this.Name} doesn't have this item ");
             }
 
         }
         public void Remove_Shield(Shield item)
         {
-            if(shield == item){
+            shield = item;
+            if(ListShield.Contains(shield))
+            {
+                ListShield.Remove(shield);
                 this.defense = this.defense - item.GetDefense();
                 Console.WriteLine($"{item.GetName()} was removed.");
             }
-            else{
+            else
+            {
                 Console.WriteLine($"Character {this.Name} doesn't have this item ");
             }
 
