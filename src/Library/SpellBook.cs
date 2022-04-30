@@ -25,13 +25,23 @@ namespace RoleplayGame_1_start
             this.Spells.Add(spell);
             this.Damage += 10;
             this.Defense += 5;
+            Console.WriteLine("The Spell was added.");
         }
 
         public void RemoveSpell(Spell spell)
         {
-            this.Spells.Remove(spell);
-            this.Damage -= 10;
-            this.Defense -= 5;
+            if (this.Spells.Contains(spell))
+            {
+                this.Spells.Remove(spell);
+                this.Damage -= 10;
+                this.Defense -= 5;
+                Console.WriteLine("The Spell was eliminated.");
+            }
+            else
+            {
+                Console.WriteLine("The Book doesn't have the spell.");
+            }
+
         }
 
         public List<Spell> GetSpells
