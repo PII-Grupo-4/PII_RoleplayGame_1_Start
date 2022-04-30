@@ -68,6 +68,7 @@ namespace RoleplayGame_1_start
                 Console.WriteLine ($"The Elve {this.Name} is dead");
             }
         }
+        //sobrecargamos el método AddItems para podes agregar varios items a la lista de items del personaje
         public void AddItems(BagofRocks bagofRocks) //añade BagofRocks al personaje y actualiza sus atributos Attack y Defense
         {
             this.ItemsElves.Add(bagofRocks);
@@ -92,6 +93,18 @@ namespace RoleplayGame_1_start
             this.ItemsElves.Remove(helmet);
             this.Defense -= helmet.GetDefense();
             this.Attack -= helmet.GetDamage(); 
+        }
+        public int GetHp()
+        {
+            return this.Hp;
+        }
+        public int GetDamage()
+        {
+            return this.Damage;
+        }
+        public int GetDefense()
+        {
+            return this.Defense;
         }
         public void Heal()
         {
