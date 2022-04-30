@@ -1,0 +1,266 @@
+<mxfile host="65bd71144e">
+    <diagram id="y2KnBQ89e9BXdKmhWoFq" name="Page-1">
+        <mxGraphModel dx="1684" dy="717" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="Wizard" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-513" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="4">
+                    <mxGeometry x="-1" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="- Name: string&lt;br&gt;- HP: int&lt;br&gt;- Defense: int&lt;br&gt;- Atack: int&lt;br&gt;- SwordsList: List&amp;lt;Sword&amp;gt;&lt;br&gt;- SpellBooks: List&amp;lt;SpellBook&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4">
+                    <mxGeometry x="-1" y="20" width="201" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="+ GetDamage()&lt;br&gt;+ GetDefense()&lt;br&gt;+ AddSword(Sword)&lt;br&gt;+ RemoveSword(Sword)&lt;br&gt;+ AddSpellBook(SpellBook)&lt;br&gt;+ RemoveSpellBook(SpellBook)&lt;br&gt;+ UpdateSpellBook(SpellBook)&lt;br&gt;+ RecieveAttack(AtackEnemy)&lt;br&gt;+ Heal()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4">
+                    <mxGeometry x="3" y="140" width="197" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Elves" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-270" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="21">
+                    <mxGeometry x="-1" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="- Name: string&lt;br&gt;- HP: int&lt;br&gt;- Defense: int&lt;br&gt;- Atack: int&lt;br&gt;- BagOfRocksList: List&amp;lt;BagOfRock&amp;gt;&lt;br&gt;- HelmetsList: List&amp;lt;Helmets&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="21">
+                    <mxGeometry x="-1" y="20" width="201" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="+ GetDamage()&lt;br&gt;+ GetDefense()&lt;br&gt;+ AddBagOfRocks(BagOfRocks)&lt;br&gt;+ RemoveBagOfRocks(BagOfRock)&lt;br&gt;+ AddHelmet(Helmet)&lt;br&gt;+ RemoveHelmet(Helmet)&lt;br&gt;+ HealCharacter()&lt;br&gt;+ Heal()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="21">
+                    <mxGeometry x="3" y="140" width="197" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Dwarves" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="26">
+                    <mxGeometry x="-1" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="- Name: string&lt;br&gt;- HP: int&lt;br&gt;- Defense: int&lt;br&gt;- Atack: int&lt;br&gt;- HammerList: List&amp;lt;Hammer&amp;gt;&lt;br&gt;- TableList: List&amp;lt;Table&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="26">
+                    <mxGeometry x="-1" y="20" width="201" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="+ GetDamage()&lt;br&gt;+ GetDefense()&lt;br&gt;+ AddHammer(Hammer)&lt;br&gt;+ RemoveHammer(Hammer)&lt;br&gt;+ AddTable(Table)&lt;br&gt;+ RemoveTable(Table)&lt;br&gt;+ HealCharacter()&lt;br&gt;+ Heal()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="26">
+                    <mxGeometry x="3" y="140" width="197" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Orc" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="260" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="30">
+                    <mxGeometry x="-1" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="- Name: string&lt;br&gt;- HP: int&lt;br&gt;- Defense: int&lt;br&gt;- Atack: int&lt;br&gt;- MaskList: List&amp;lt;Mask&amp;gt;&lt;br&gt;- BowList: List&amp;lt;Bow&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
+                    <mxGeometry x="-1" y="20" width="201" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="+ GetDamage()&lt;br&gt;+ GetDefense()&lt;br&gt;+ AddMask(Mask)&lt;br&gt;+ RemoveMask(Mask)&lt;br&gt;+ AddBow(Bow)&lt;br&gt;+ RemoveBow(Bow)&lt;br&gt;+ HealCharacter()&lt;br&gt;+ Heal()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="30">
+                    <mxGeometry x="3" y="140" width="197" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Orc" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="520" width="200" height="300" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="34">
+                    <mxGeometry x="-1" y="120" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="- Name: string&lt;br&gt;- HP: int&lt;br&gt;- Defense: int&lt;br&gt;- Atack: int&lt;br&gt;- ArmorList: List&amp;lt;Armor&amp;gt;&lt;br&gt;- ShieldList: List&amp;lt;Shield&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="-1" y="20" width="201" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="+ GetDamage()&lt;br&gt;+ GetDefense()&lt;br&gt;+ AddArmor(Armor)&lt;br&gt;+ RemoveArmor(Armor)&lt;br&gt;+ AddShield(Shield)&lt;br&gt;+ RemoveShield(Shield)&lt;br&gt;+ HealCharacter()&lt;br&gt;+ Heal()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="34">
+                    <mxGeometry x="3" y="140" width="197" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" style="edgeStyle=none;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="40" target="19">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-630" y="253"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="SpellBook" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-730" y="340" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="40">
+                    <mxGeometry y="80" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int&lt;br&gt;- Spells: List&amp;lt;Spell&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="40">
+                    <mxGeometry y="20" width="200" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()&lt;br&gt;+ GetSpells()&lt;br&gt;+ AddSpell()&lt;br&gt;+ RemoveSpell()&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="40">
+                    <mxGeometry x="3" y="100" width="197" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="40" source="40" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="49" target="43">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Spell" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-730" y="640" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="49">
+                    <mxGeometry y="40" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="- TheSpell: string" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="49">
+                    <mxGeometry y="20" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="+ GetSpell()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="49">
+                    <mxGeometry x="3" y="60" width="197" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" style="edgeStyle=none;html=1;" edge="1" parent="1" source="56" target="19">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="Sword" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-510" y="340" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="57" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="56">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="56">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="56">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" style="edgeStyle=none;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="63" target="21">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-280" y="400"/>
+                            <mxPoint x="-240" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" value="BagsOfRocks" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-390" y="540" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="63">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="63">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="63">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="Helmet" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-210" y="360" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="67">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="67">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="67">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="71" target="26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="Table" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="360" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="71">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="71">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="71">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="Bow" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="360" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="80">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="80">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="80">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" style="edgeStyle=none;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="84" target="26">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="50" y="480"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="84" value="Hammer" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="-110" y="540" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="84">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="84">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="84" source="87" target="84">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="84">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="Mask" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="540" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="88">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="88">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="88">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Shield" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="360" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="92">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="92">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="92">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="Armor" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="540" width="200" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="" style="line;strokeWidth=4;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;" vertex="1" parent="96">
+                    <mxGeometry y="70" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="- Name: string&lt;br&gt;- Defense: int&lt;br&gt;- Damage: int" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="96">
+                    <mxGeometry y="19" width="200" height="61" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="+ GetName&lt;br&gt;+ GetDamage()&lt;br&gt;+ GetDefense()" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="96">
+                    <mxGeometry y="90" width="197" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" style="edgeStyle=none;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="96" source="98" target="98">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="69" target="21">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="66" target="87">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="109" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="30">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="450" y="360" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="110" style="edgeStyle=none;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="92" target="34">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="730" y="350" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="113" style="edgeStyle=none;html=1;" edge="1" parent="1" source="90">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="339.9999999999998" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="114" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="98" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
