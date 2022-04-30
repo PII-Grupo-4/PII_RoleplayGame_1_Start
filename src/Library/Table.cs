@@ -3,12 +3,12 @@ namespace RoleplayGame_1_start
     public class Table
     {
         private int defense { get; set; }
-        private string Name { get; set; }
+        private string name { get; set; }
         
 
-        public Table(string Name, int defense)
+        public Table(string name, int defense)
         {
-            this.Name = Name;
+            this.name = name;
             this.defense = defense;
         }
         public int GetDefense()
@@ -17,7 +17,7 @@ namespace RoleplayGame_1_start
         }
         public string GetName()
         {
-            return this.Name;
+            return this.name;
         }
     }
 }
