@@ -7,7 +7,7 @@ namespace RoleplayGame_1_start.Test
     public class OrcTests
     {
 
-        [Test0]
+        [Test]
         public void Orcdie() // si el Attack del enemy es mayor a 150
         {
            Orc orcTest = new Orc("OrcTest");
@@ -16,7 +16,7 @@ namespace RoleplayGame_1_start.Test
             Assert.AreEqual(orcTest.GetHP(), expected); 
         }
 
-        [Test1]
+        [Test]
         public void Receives_Attack()
         {
             Orc orcTest = new Orc("OrcTest");
@@ -24,39 +24,39 @@ namespace RoleplayGame_1_start.Test
             int expected =80;
             Assert.AreEqual(orcTest.GetHP(), expected);
         }
-        [Test2]
+        [Test]
         public void AddBow()
         {
             Orc orcTest = new Orc("OrcTest");
-            Bow bow = new Bow("Bow", 10);
-            int total = Orc.Defense + bow.GetDefense();
+            Bow bow = new Bow("Bow", 10,10);
+            int total = orcTest.GetDefense() + bow.GetDefense();
             int expected=60;
             Assert.AreEqual(total, expected);
         }
-        [Test3]
+        [Test]
         public void AddMask()
         {
             Orc orcTest = new Orc("OrcTest");
-            Mask mask = new Mask("Mask",15);
-            int total = Orc.Defense + mask.GetDefense();
+            Mask mask = new Mask("Mask",15,15);
+            int total = orcTest.GetDefense() + mask.GetDefense();
             int expected=65;
             Assert.AreEqual(total, expected);
         }
-        [Test4]
+        [Test]
         public void RemoveBow()
         {
             Orc orcTest = new Orc("OrcTest");
-            Bow bow = new Bow("Bow", 10);
-            int total = Orc.Defense - bow.GetDefense();
+            Bow bow = new Bow("Bow", 10,10);
+            int total = orcTest.GetDefense() - bow.GetDefense();
             int expected=40;
             Assert.AreEqual(total, expected);
         }
-        [Test5]
+        [Test]
         public void RemoveMask()
         {
             Orc orcTest = new Orc("OrcTest");
-            Mask mask = new Mask("Mask",15);
-            int total = Orc.Defense - mask.GetDefense();
+            Mask mask = new Mask("Mask",15,15);
+            int total = orcTest.GetDefense() - mask.GetDefense();
             int expected=35;
             Assert.AreEqual(total, expected);
 

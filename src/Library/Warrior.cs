@@ -21,7 +21,7 @@ namespace RoleplayGame_1_start{
         {
             this.Defense = 50;
             this.Hp = 100;
-            this.Attack = 10;
+            this.attack = 10;
             this.Name = name;
         }
 

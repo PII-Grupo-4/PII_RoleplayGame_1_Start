@@ -41,17 +41,17 @@ namespace RoleplayGame_1_start
          public void AddBow(Bow bow)
         {
             this.BowList.Add(bow);
-            this.Defense = this.Defense+ Bow.GetDefense();
-            this.Attack = this.Attack + Bow.GetDamage();
-            Console.WriteLine($"The Bow {Bow.GetName()} was added.");
+            this.Defense = this.Defense+ bow.GetDefense();
+            this.Attack = this.Attack + bow.GetDamage();
+            Console.WriteLine($"The Bow {bow.GetName()} was added.");
         }
 
         public void AddMask(Mask mask)
         {
             this.MaskList.Add(mask);
-            this.Defense = this.Defense + Bow.GetDefense();
-            this.Attack= this.Attack + Bow.GetDamage();
-            Console.WriteLine($"The mask {Mask.GetName()} was added");
+            this.Defense = this.Defense + mask.GetDefense();
+            this.Attack= this.Attack + mask.GetDamage();
+            Console.WriteLine($"The mask {mask.GetName()} was added");
         }
         
         
@@ -60,9 +60,9 @@ namespace RoleplayGame_1_start
             if(BowList.Count >= 1)
             {
                 BowList.Remove(bow);
-                this.Attack = this.Attack - Bow.GetDamage();
-                this.Defense = this.Defense - Bow.GetDefense();
-                Console.WriteLine($"{Bow.GetName()} was removed.");
+                this.Attack = this.Attack - bow.GetDamage();
+                this.Defense = this.Defense - bow.GetDefense();
+                Console.WriteLine($"{bow.GetName()} was removed.");
             }
             else{
                 Console.WriteLine($"Orc {this.Name} doesn't have any Bows ");
@@ -73,9 +73,9 @@ namespace RoleplayGame_1_start
             if(MaskList.Count >= 1)
             {
                 MaskList.Remove(mask);
-                this.Attack = this.Attack - Mask.GetDamage();
-                this.Defense = this.Defense - Mask.GetDefense();
-                Console.WriteLine($"{Mask.GetName()} was removed.");
+                this.Attack = this.Attack - mask.GetDamage();
+                this.Defense = this.Defense - mask.GetDefense();
+                Console.WriteLine($"{mask.GetName()} was removed.");
             }
             else
             {
@@ -93,6 +93,10 @@ namespace RoleplayGame_1_start
         public int GetHP()
         {
             return this.HP;
+        }
+        public void Heal()
+        {
+            this.HP = 100;
         }
 
     }

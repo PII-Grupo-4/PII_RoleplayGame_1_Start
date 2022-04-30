@@ -15,23 +15,20 @@ namespace RoleplayGame_1_start
         this.Damage = damage;
         }
         
-        public string GetName
+        public string GetName()
         {
-            get
             {
                 return this.Name;
             }
         }
-        public int GetDefense
+        public int GetDefense()
         {
-            get
             {
                 return this.Defense;
             }
         }
-         public int GetDamage
+         public int GetDamage()
         {
-            get
             {
                 return this.Damage;
             }
