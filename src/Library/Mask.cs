@@ -4,19 +4,38 @@ namespace RoleplayGame_1_start
     {
     private int Defense { get; set; }
     private string Name { get; set; }
+
+    private int Damage {get;set;}
     
-    public Mask(string name, int defense)
+    public Mask(string Name, int defense, int damage)
         {
-        this.Name = name;
+        this.Name = Name;
         this.Defense = defense;
+        this.Damage = damage;
         }
-    public int GetDefense()
+        
+            public string GetName
+            {
+                get
+            
+            {
+                return this.Name;
+            }
+
+             }
+        public int GetDefense
         {
-        return this.Defense;
+            get
+            {
+                return this.Defense;
+            }
         }
-        public string GetName()
+         public int GetDamage
         {
-        return this.Name;
+            get
+            {
+                return this.Damage;
+            }
         }
     }
 }

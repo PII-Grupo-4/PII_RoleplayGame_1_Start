@@ -97,5 +97,21 @@ namespace RoleplayGame_1_start
         {
             this.Hp = 100;
         }
+        public void Heal_Wizard(Wizard wizard)
+        {
+            wizard.Heal();
+        }
+        public void Heal_Orc(Orc orc)
+        {
+            orc.Heal();
+        }
+        public void Heal_Warrior(Warrior warrior)
+        {
+            warrior.Heal();
+        }
+        public void Heal_Dwarves(Dwarves dwarves)
+        {
+            dwarves.Heal();
+        }
     }
 }
