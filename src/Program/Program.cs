@@ -62,17 +62,17 @@ namespace Program
             //Warrior
             Warrior warrior1 = new Warrior("WarriorPlayer1");
             Warrior warrior2 = new Warrior("WarriorPlayer2");
-            Items shield = new Items("GodShield", 1, 110);
-            Items armor = new Items("Rookie Fragile Armor", 0, 5);
+            Shield shield = new Shield("GodShield", 110);
+            Armor armor = new Armor("Rookie Fragile Armor", 5);
 
-            warrior1.Add_Element(shield);
-            warrior1.Add_Element(armor);
+            warrior1.Add_Shield(shield);
+            warrior1.Add_Armor(armor);
             warrior1.GetInfo();
             Console.WriteLine();
 
             warrior1.Receives_Attack(warrior2.Attack);
-            warrior2.Remove_Element(armor);
-            warrior1.Remove_Element(shield);
+            warrior2.Remove_Armor(armor);
+            warrior1.Remove_Shield(shield);
 
             /*----------------------------------------------------------------------------------------------*/
             //Orc

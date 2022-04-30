@@ -10,6 +10,10 @@ namespace RoleplayGame_1_start{
 
         private int attack;
 
+        private Shield shield;
+
+        private Armor armor;
+
         List<Items> ListItems = new List<Items>();
 
         public Warrior(string name)
@@ -31,24 +35,40 @@ namespace RoleplayGame_1_start{
         }
 
 
-        public void Add_Element(Items item)
+        public void Add_Shield(Shield item)
         {
-            ListItems.Add(item);
-                this.attack = this.attack + item.GetDamage();
+            shield = item;
+                this.defense = this.defense + item.GetDefense();
+                Console.WriteLine($"{item.GetName()} was added .");
+        }
+        public void Add_Armor(Armor item)
+        {
+            armor = item;
                 this.defense = this.defense + item.GetDefense();
                 Console.WriteLine($"{item.GetName()} was added .");
         }
 
-        public void Remove_Element(Items item)
+
+        public void Remove_Armor(Armor item)
         {
-            if(ListItems.Count >= 1){
-                ListItems.Remove(item);
-                this.attack = this.attack - item.GetDamage();
+            if(armor == item){
+                armor = null;
                 this.defense = this.defense - item.GetDefense();
                 Console.WriteLine($"{item.GetName()} was removed.");
             }
             else{
-                Console.WriteLine($"Character {this.Name} doesn't have items ");
+                Console.WriteLine($"Character {this.Name} doesn't have this item ");
+            }
+
+        }
+        public void Remove_Shield(Shield item)
+        {
+            if(shield == item){
+                this.defense = this.defense - item.GetDefense();
+                Console.WriteLine($"{item.GetName()} was removed.");
+            }
+            else{
+                Console.WriteLine($"Character {this.Name} doesn't have this item ");
             }
 
         }
