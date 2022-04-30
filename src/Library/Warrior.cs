@@ -34,6 +34,11 @@ namespace RoleplayGame_1_start{
             Console.WriteLine($"Name: {this.Name} \nAttack: {this.attack} \nDefense: {this.defense}\nHP: {this.Hp}\nItem Quantity: {this.ListItems.Count}");
         }
 
+        public void Heal()
+        {
+            this.Hp = 100;
+        }
+
 
         public void Add_Shield(Shield item)
         {
