@@ -1,15 +1,15 @@
 namespace RoleplayGame_1_start
 {
-    public class Items
+    public class BagofRocks
     {
         private int Attack { get; set; }
-        private int Defense { get; set; }
         private string Name { get; set; }
+        private int Defense { get; set; }
         
 
-        public Items(string Name, int attack, int defense)
+        public BagofRocks (string name, int attack, int defense)
         {
-            this.Name = Name;
+            this.Name = name;
             this.Attack = attack;
             this.Defense = defense;
         }

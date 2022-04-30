@@ -12,9 +12,9 @@ namespace RoleplayGame_1_start
 
         List<Spell> spells = new List<Spell>();
 
-        public SpellBook(string NameBook)
+        public SpellBook(string nameBook)
         {
-            this.Name = NameBook;
+            this.Name = nameBook;
             this.Spells = spells;
             this.Defense = 0;
             this.Damage = 0;

@@ -2,18 +2,18 @@ namespace RoleplayGame_1_start
 {
     public class Shield
     {
-        private int defense { get; set; }
+        private int Defense { get; set; }
         private string Name { get; set; }
         
 
-        public Shield(string Name, int defense)
+        public Shield(string name, int defense)
         {
-            this.Name = Name;
-            this.defense = defense;
+            this.Name = name;
+            this.Defense = defense;
         }
         public int GetDefense()
         {
-            return this.defense;
+            return this.Defense;
         }
         public string GetName()
         {

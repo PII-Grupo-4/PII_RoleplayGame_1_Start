@@ -2,17 +2,17 @@ namespace RoleplayGame_1_start
 {
     public class Bow
     {
-    private int defense { get; set; }
+    private int Defense { get; set; }
     private string Name { get; set; }
     
-    public Bow(string Name, int defense)
+    public Bow(string name, int defense)
         {
-        this.Name = Name;
-        this.defense = defense;
+        this.Name = name;
+        this.Defense = defense;
         }
     public int GetDefense()
         {
-        return this.defense;
+        return this.Defense;
         }
         public string GetName()
         {
